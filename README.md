@@ -82,7 +82,7 @@ skynow/
 ## 🔧 Como executar o projeto
 
 1. Clone o repositório:
-   git clone https://github.com/SEU_USUARIO/skynow.git
+   git clone https://github.com/gioroberta/skynow.git
 
 2. Abra o projeto no VS Code
 
