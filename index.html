@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyNow — o clima em tempo real</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <div class="branding">
+          <div class="logo-circle">☁️</div>
+          <div class="branding-text">
+            <h1>SkyNow</h1>
+            <p>O clima em tempo real, com dados da Open-Meteo.</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="search-section">
+        <form id="city-form" class="search-form">
+          <label for="city-input" class="sr-only">Nome da cidade</label>
+          <input
+            id="city-input"
+            type="text"
+            autocomplete="off"
+            placeholder="Digite o nome da cidade (ex: Recife)"
+            required
+          />
+          <button type="submit">Buscar</button>
+        </form>
+      </section>
+
+      <section class="state-section">
+        <div id="loader" class="loader hidden">
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+          <span class="loader-dot"></span>
+          <span>Buscando clima...</span>
+        </div>
+
+        <p id="error-message" class="error-message hidden"></p>
+
+        <article id="weather-card" class="weather-card hidden">
+          <div class="weather-main">
+            <div class="weather-info">
+              <h2 id="city-name"></h2>
+              <p id="description"></p>
+            </div>
+            <div class="temperature-block">
+              <span id="temperature">--</span>
+              <span class="temp-unit">°C</span>
+            </div>
+          </div>
+
+          <div class="weather-extra">
+            <div class="extra-item">
+              <span class="label">Vento</span>
+              <span id="wind">-- km/h</span>
+            </div>
+            <div class="extra-item">
+              <span class="label">Direção</span>
+              <span id="wind-direction">--°</span>
+            </div>
+            <div class="extra-item">
+              <span class="label">Atualizado</span>
+              <span id="time">--</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer class="app-footer">
+        <p>Feito com ♥ em JavaScript, HTML, CSS, Open-Meteo e IA.</p>
+      </footer>
+    </main>
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
+</html>
